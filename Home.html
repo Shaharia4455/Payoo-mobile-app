@@ -49,13 +49,15 @@
         <section class="p-4">
           <div class="card-container mt-6 grid grid-cols-3 gap-4">
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+            id="add-money-card"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-slate-100 shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/wallet1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Add Money</p>
             </div>
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+            id="cash-out-card"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-slate-100 shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/send1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Cashout</p>
@@ -91,9 +93,10 @@
           </div>
         </section>
       </div>
+      <div class="all-from-section p-4">
+        <!-- add-money from section -->
 
-      <div class="all-card-section p-4">
-        <div class="add-money">
+        <div id="add-money-from-section" class="hidden">
           <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Add Money</h1>
           <form class="bg-white rounded-3xl p-6 mt-4">
             <div>
@@ -141,6 +144,47 @@
               />
             </div>
             <button id="add-money" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Add Money</button>
+          </form>
+        </div>
+        <!-- cash out from section -->
+
+        <div id="cash-out-from-section" class="hidden">
+          <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Cash Out</h1>
+          <form class="bg-white rounded-3xl p-6 mt-4">
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Agent Number</label
+              ><br />
+              <input
+                type="text"
+                id="agent-number"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter 11 digit number"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Amount</label
+              ><br />
+              <input
+                type="text"
+                id="cash-out-amount"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter amount to withdraw"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Pin Number</label
+              ><br />
+              <input
+                type="text"
+                id="cash-out-pin"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter 4 digit pin number"
+              />
+            </div>
+            <button id="cash-out-btn" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Withdraw Money</button>
           </form>
         </div>
       </div>
