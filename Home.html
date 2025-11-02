@@ -46,42 +46,46 @@
             </p>
           </div>
         </section>
+        <!-- card-container section  -->
         <section class="p-4">
           <div class="card-container mt-6 grid grid-cols-3 gap-4">
             <div
             id="add-money-card"
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-slate-100 shadow-sm hover:shadow-xl"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/wallet1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Add Money</p>
             </div>
             <div
             id="cash-out-card"
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-slate-100 shadow-sm hover:shadow-xl"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/send1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Cashout</p>
             </div>
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+            id="transfer-money-card"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/money1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Transfer Money</p>
             </div>
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+            id="get-bonus-card"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/bonus1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Get Bonus</p>
             </div>
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+            id="pay-bill-card"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img class="w-6 h-6 mx-auto" src="./assets/purse1.png" alt="" />
               <p class="text-[#080808b3] mt-2">Pay Bill</p>
             </div>
             <div
-              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl"
+              class="card text-center p-3 border border-[#0808081a] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img
                 class="w-6 h-6 mx-auto"
@@ -96,7 +100,7 @@
       <div class="all-from-section p-4">
         <!-- add-money from section -->
 
-        <div id="add-money-from-section" class="hidden">
+        <div id="add-money-from-section" class="form hidden">
           <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Add Money</h1>
           <form class="bg-white rounded-3xl p-6 mt-4">
             <div>
@@ -148,7 +152,7 @@
         </div>
         <!-- cash out from section -->
 
-        <div id="cash-out-from-section" class="hidden">
+        <div id="cash-out-from-section" class="form hidden">
           <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Cash Out</h1>
           <form class="bg-white rounded-3xl p-6 mt-4">
             <div class="mt-4">
@@ -185,6 +189,113 @@
               />
             </div>
             <button id="cash-out-btn" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Withdraw Money</button>
+          </form>
+        </div>
+                <!-- Transfer money from section -->
+
+        <div id="transfer-money-from-section" class="form hidden">
+          <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Transfer Money</h1>
+          <form class="bg-white rounded-3xl p-6 mt-4">
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >User Account Number</label
+              ><br />
+              <input
+                type="text"
+                id="Transfer-account-number"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter 11 digit number"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Amount</label
+              ><br />
+              <input
+                type="text"
+                id="transfer-money-amount"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter amount to transfer"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Pin Number</label
+              ><br />
+              <input
+                type="text"
+                id="transfer-money-pin"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter 4 digit pin number"
+              />
+            </div>
+            <button id="transfer-money-btn" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Send Now</button>
+          </form>
+        </div>
+              <!-- Get bonus -->
+        <div id="get-bonus-from-section" class="form hidden">
+          <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Get Bonus</h1>
+          <form class="bg-white rounded-3xl p-6 mt-4">
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Enter Bonus Coupon</label
+              ><br />
+              <input
+                type="text"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter your coupon"
+              />
+            </div>
+            <button class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Get Bonus</button>
+          </form>
+        </div>
+                <!-- pay bill from section -->
+
+        <div id="pay-bill-from-section" class="form hidden">
+          <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Pay Bill</h1>
+          <form class="bg-white rounded-3xl p-6 mt-4">
+            <div>
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Select To Pay</label
+              ><br />           
+              <select  class="select mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none">
+                <option disabled selected>Select back</option>
+                <option>IFIC Bank</option>
+                <option>BRAC Band</option>
+                <option>Dutch Bangla Bank</option>
+              </select>
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Biller Account Number</label
+              ><br />
+              <input
+                type="text"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter account number"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Amount to Pay</label
+              ><br />
+              <input
+                type="text"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Add Amount to pay"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="font-semibold text-[#080808b3]" for=""
+                >Pin Number</label
+              ><br />
+              <input
+                type="text"
+                class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
+                placeholder="Enter 4 digit pin number"
+              />
+            </div>
+            <button class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Pay Now</button>
           </form>
         </div>
       </div>
