@@ -41,7 +41,16 @@ function togglingCardHandle(id){
 
      document.getElementById(id).style.display = "block"
 }
-
+// function to get cards styles toggling
+function togglingCardStyle(id){
+    const btns = document.getElementsByClassName("form-btn")
+    for(const btn of btns){
+        btn.classList.remove("border-[#0874f2]","bg-[#0874f20d]","font-bold","text-[#0874f2]")
+        btn.classList.add("border-[#0808081a]","text-[#080808b3]")
+    }
+    document.getElementById(id).classList.remove("border-[#0808081a]","text-[#080808b3]")
+    document.getElementById(id).classList.add("border-[#0874f2]","bg-[#0874f20d]","font-bold","text-[#0874f2]")
+}
 //  add money from button
 
 document.getElementById("add-money").addEventListener("click", function(e){
@@ -101,28 +110,33 @@ document.getElementById("cash-out-btn").addEventListener("click", function(e){
 document.getElementById("add-money-card").addEventListener("click", function(){
 
     togglingCardHandle("add-money-from-section")
+    togglingCardStyle("add-money-card")
 })
 
 // Cash Out card click
 document.getElementById("cash-out-card").addEventListener("click", function(){
 
     togglingCardHandle("cash-out-from-section")
+    togglingCardStyle("cash-out-card")
 })
 
 // Transfer money card click
 document.getElementById("transfer-money-card").addEventListener("click", function(){
 
-    togglingCardHandle("transfer-money-from-section")   
+    togglingCardHandle("transfer-money-from-section") 
+    togglingCardStyle("transfer-money-card")  
 })
 
-// Cash Out card click
+// Get bonus card click
 document.getElementById("get-bonus-card").addEventListener("click", function(){
 
     togglingCardHandle("get-bonus-from-section")
+    togglingCardStyle("get-bonus-card") 
 })
 
-// Cash Out card click
+// Pay Bill card click
 document.getElementById("pay-bill-card").addEventListener("click", function(){
 
     togglingCardHandle("pay-bill-from-section")
+    togglingCardStyle("pay-bill-card")
 })
