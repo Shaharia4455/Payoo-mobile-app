@@ -89,7 +89,9 @@
               <img class="w-6 h-6 mx-auto" src="./assets/purse1.png" alt="" />
               <p class="mt-2">Pay Bill</p>
             </div>
+            <!-- Transactions -->
             <div
+            id="Transactions-card"
               class="form-btn card text-center p-3 border border-[#0808081a] text-[#080808b3] px-3 py-5 rounded-b-xl transition-transform duration-300 hover:scale-103 hover:bg-[#E2E2E2] shadow-sm hover:shadow-xl"
             >
               <img
@@ -105,7 +107,7 @@
       <div class="all-from-section p-4">
         <!-- add-money from section -->
 
-        <div id="add-money-from-section" class="form hidden">
+        <div id="add-money-from-section" class="form">
           <h1 class="mt-8 text-[#080808e6] text-lg font-semibold">Add Money</h1>
           <form class="bg-white rounded-3xl p-6 mt-4">
             <div>
@@ -247,11 +249,12 @@
               ><br />
               <input
                 type="text"
+                id="bonus-coupon"
                 class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
-                placeholder="Enter your coupon"
+                placeholder="Your coupon num is (1234)"
               />
             </div>
-            <button class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Get Bonus</button>
+            <button id="get-bonus-btn" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Get Bonus</button>
           </form>
         </div>
                 <!-- pay bill from section -->
@@ -276,6 +279,7 @@
               ><br />
               <input
                 type="text"
+                id="bill-pay-account"
                 class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
                 placeholder="Enter account number"
               />
@@ -286,6 +290,7 @@
               ><br />
               <input
                 type="text"
+                id="bill-pay-amount"
                 class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
                 placeholder="Add Amount to pay"
               />
@@ -296,14 +301,23 @@
               ><br />
               <input
                 type="text"
+                id="bill-pay-pin"
                 class="input mt-3 px-5 py-4 w-full h-[52px] rounded-4xl bg-[#f4f5f7] border-none"
                 placeholder="Enter 4 digit pin number"
               />
             </div>
-            <button class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Pay Now</button>
+            <button id="bill-pay-btn" class="btn text-white bg-[#0874f2] mt-4 w-full h-[52px] rounded-4xl ">Pay Now</button>
           </form>
         </div>
-      </div>
+        <!-- Transactions section  -->
+         <div id="transactions-section" class="form hidden">
+        <div class="mt-8 flex justify-between items-center">
+            <h1 class=" text-[#080808e6] text-lg font-semibold">Transactions</h1>
+          <div><p class="text-[#08080880]">View All</p></div>
+        </div>
+        <div id="transactions-container">
+    </div>
+  </div>
     </main>
 
     <script src="./Home.js"></script>
